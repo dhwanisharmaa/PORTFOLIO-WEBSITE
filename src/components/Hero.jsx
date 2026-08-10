@@ -439,7 +439,7 @@ const Hero = () => {
           }}>
             View Projects &rarr;
           </a>
-          <a href="/resume_placeholder.pdf" download className="link-grow" style={{
+          <a href="/Dhwani_Sharma_Resume.pdf" download="Dhwani_Sharma_Resume.pdf" className="link-grow" style={{
             fontFamily: 'var(--font-sans)',
             fontSize: '0.85rem',
             fontWeight: '500',

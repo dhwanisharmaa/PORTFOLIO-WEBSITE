@@ -123,8 +123,8 @@ const Contact = () => {
           {/* Right: CV Download Button */}
           <div>
             <a
-              href="/resume_placeholder.pdf"
-              download
+              href="/Dhwani_Sharma_Resume.pdf"
+              download="Dhwani_Sharma_Resume.pdf"
               className="cv-btn"
               style={{
                 display: 'inline-flex',
