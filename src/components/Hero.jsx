@@ -418,8 +418,8 @@ const Hero = () => {
             color: 'var(--ink)',
             fontWeight: '300'
           }}>
-            I design and build at the intersection of visual systems, artificial intelligence, and interactive technology. 
-            Currently studying Computer Science at SRM Institute of Science and Technology with a 9.13 GPA &mdash; exploring how computation can feel as alive as the natural world.
+            I design and build at the intersection of software systems, human-centered design, and creative technology. 
+            Currently studying Computer Science at SRM IST (KTR) with a 9.13 GPA &mdash; balancing software engineering, corporate leadership, and a lifelong passion for space exploration and art.
           </p>
         </div>
 

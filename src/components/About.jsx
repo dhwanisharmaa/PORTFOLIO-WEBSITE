@@ -39,7 +39,7 @@ const About = () => {
               color: 'var(--ink)',
               fontWeight: '400'
             }}>
-              I'm a Computer Science undergraduate at SRM IST (KTR) working across UI/UX design, computer vision, AI systems, and interactive visualisation. My approach treats interfaces as living environments &mdash; data-dense but intuitive, technically rigorous but visually expressive. 
+              I'm a Computer Science undergraduate at SRM IST (KTR) working across software development, UI/UX design, and interactive technologies. Beyond code, I have a deep fascination with the cosmos—leading me to secure World Rank 6 in the International Space Olympiad 2023. This blend of technical rigor and cosmic curiosity shapes how I view design: structured, expansive, and always exploring.
             </p>
             <p style={{
               fontFamily: 'var(--font-sans)',
@@ -48,7 +48,7 @@ const About = () => {
               color: 'var(--ink)',
               fontWeight: '400'
             }}>
-              I've designed AI-powered urban safety platforms, built full-stack event systems, created supply-chain intelligence dashboards, and experimented with real-time computer vision using TouchDesigner and MediaPipe.
+              Whether designing AI-driven urban safety platforms like CitySafe, leading corporate operations for Coding Ninjas 10x SRM, or chairing ECOSOC committees at MUN conferences, I thrive in environments that challenge my problem-solving and leadership skills. When I'm not coding or stargazing, you'll find me immersed in painting and digital art—bringing creative imagination to life.
             </p>
           </div>
         </div>

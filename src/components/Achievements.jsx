@@ -2,6 +2,7 @@ import React from 'react';
 
 const Achievements = () => {
   const honorsList = [
+    { text: 'Model United Nations &mdash; Best Delegate (WHO Committee) &amp; ECOSOC Co-Chair' },
     { text: 'NUS Leadership in Business Analytics &mdash; Distinction (Jan 2025)' },
     { text: 'TechXcelerate 2025 &mdash; Penultimate Round, BITS Pilani Hyderabad' },
     { text: 'Google Cloud Agentic AI Day &mdash; Participant' },

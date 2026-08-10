@@ -3,22 +3,28 @@ import React from 'react';
 const Experience = () => {
   const experienceList = [
     {
+      title: 'Corporate Head',
+      org: 'Coding Ninjas 10x SRM',
+      period: 'Jun 2026 – Present',
+      desc: 'Leading corporate initiatives, managing team operations, and organizing tech community events. Previously served as a Corporate Member from Oct 2025.'
+    },
+    {
       title: 'Delegate Affairs Head',
-      org: 'SRMMUN',
-      period: 'Jul 2025 – Apr 2025',
-      desc: 'Managed communication and coordination with internal and external delegates across all sessions. Oversaw logistics, onboarding, and scheduling for the conference.'
+      org: 'SRM MUN Society',
+      period: 'Jul 2025 – Jun 2026',
+      desc: 'Managed communication and coordination with internal and external delegates across all sessions. Oversaw logistics, onboarding, and scheduling for the conference. Previously served as a Delegate Affairs Member from Sep 2024.'
     },
     {
-      title: 'Corporate Member',
-      org: 'CAD 4.0 — Control Alt Delete (National Hackathon)',
-      period: '2025',
-      desc: 'Supported end-to-end planning and coordination of a 24-hour national hackathon. Managed participant registration and judge coordination.'
+      title: 'UI/UX Development Intern',
+      org: 'Cherry+ Network',
+      period: 'Mar 2025 – May 2025',
+      desc: 'Designed interfaces and built interactive front-end components using Figma and modern web technologies.'
     },
     {
-      title: 'Leadership in Business Analytics (Distinction)',
-      org: 'National University of Singapore — Prof. Tan Wee Kek',
-      period: 'Jan 2025',
-      desc: 'Completed an intensive analytics leadership program developing expertise in data-driven strategy, stakeholder alignment, and digital transformation. Awarded Distinction.'
+      title: 'Sponsorship Marketing Volunteer',
+      org: 'IEEE SRMIST Student Branch',
+      period: 'Nov 2024 – Jul 2025',
+      desc: 'Handled corporate outreach, sponsorship marketing, and public relations to fund student-led tech events and workshops.'
     }
   ];
 

@@ -31,8 +31,8 @@ const Contact = () => {
         pointerEvents: 'none',
         zIndex: 1
       }}>
-        <BotanicalSprite 
-          region="lotus1" 
+        <BotanicalSprite
+          region="lotus1"
           opacity={0.10}
           extend={true}
           washColor="rgba(38, 67, 67, 0.03)"
@@ -42,7 +42,7 @@ const Contact = () => {
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         {/* Section label */}
         <div className="section-label">Contact</div>
-        
+
         {/* Heading */}
         <h2 className="section-heading">
           Let's build something <em>strange</em>, useful, or beautiful.
@@ -103,7 +103,7 @@ const Contact = () => {
                 LinkedIn Profile &rarr;
               </a>
               <a
-                href="https://github.com/kushagrjoshi777/"
+                href="https://github.com/dhwanisharmaa"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="link-grow"
