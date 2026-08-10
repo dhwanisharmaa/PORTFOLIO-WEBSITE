@@ -1,0 +1,265 @@
+:root {
+  /* Color System - Warm Aged Paper & Decayed Botany */
+  --parchment: #EFEAE1;      /* Warmer, deeper aged paper background */
+  --parchment-deep: #E3DAC9; /* Darker parchment for contrast structures */
+  --cream: #FDF9F2;          /* Lightest cream background for hero highlights */
+  --moss: #354F3B;           /* Slightly deeper, earthier moss green */
+  --olive: #65795A;          /* Muted naturalist olive green */
+  --pond: #264343;           /* Dark pond teal for watercolor washes */
+  --forest: #142F2A;         /* Darkest forest ink for primary text/nav */
+  --lotus: #C88F9A;          /* Dusty lotus pink accent */
+  --rose-faded: #AC777C;     /* Decayed rose secondary warm accent */
+  --marigold: #C49F3C;       /* Muted marigold highlight accent */
+  --ink: #2A2A28;            /* Near-black ink for main text */
+  --ink-light: #585850;      /* Muted metadata slate color */
+  
+  /* Fonts */
+  --font-display: 'Cormorant Garamond', serif;
+  --font-sans: 'Inter', sans-serif;
+  
+  /* Layout Transitions */
+  --transition-slow: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-medium: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.25s ease;
+  --container-width: 1200px;
+}
+
+/* Base resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--parchment);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.7;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Paper Grain Overlay - increased opacity to 0.08 for stronger texture visibility */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 9999;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Custom scrollbar in moss green theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--parchment-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--olive);
+  border-radius: 5px;
+  border: 3px solid var(--parchment-deep);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--moss);
+}
+
+/* Typography elements */
+p {
+  color: var(--ink);
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+/* Layout helpers */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 5vw, 6rem);
+  width: 100%;
+}
+
+.section {
+  padding: clamp(6rem, 12vh, 10rem) 0;
+  position: relative;
+}
+
+/* Section label accent styling */
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--ink-light);
+  margin-bottom: 24px;
+}
+
+.section-label::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  background-color: var(--moss);
+  opacity: 0.3;
+}
+
+/* Section Header Typography */
+.section-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 3.8rem);
+  font-weight: 500;
+  line-height: 1.05;
+  color: var(--forest);
+  margin-bottom: 48px;
+  max-width: 800px;
+}
+
+.section-heading em {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Vine-growing hover underline animation */
+.link-grow {
+  position: relative;
+  text-decoration: none;
+  color: var(--moss);
+  transition: var(--transition-fast);
+}
+
+.link-grow::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--moss);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.link-grow:hover::after {
+  transform: scaleX(1);
+}
+
+/* Technology and metadata tags */
+.tag-meta {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--ink-light);
+}
+
+.tag-tech {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  background: rgba(101, 121, 90, 0.08);
+  border: 1px solid rgba(101, 121, 90, 0.16);
+  border-radius: 4px;
+  color: var(--olive);
+}
+
+/* Visual elements - wobbly frame */
+.wobbly-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  background: var(--parchment-deep);
+  border-radius: 2px;
+}
+
+/* Scroll reveals */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ultra-Slow Botanical Drift Animations — Atmospheric Floating */
+@keyframes botanical-drift-1 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(3px, -4px) rotate(0.6deg); }
+  66% { transform: translate(-2px, 2px) rotate(-0.3deg); }
+}
+
+@keyframes botanical-drift-2 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(-4px, 3px) rotate(-0.8deg); }
+  66% { transform: translate(2px, -2px) rotate(0.4deg); }
+}
+
+@keyframes botanical-drift-3 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(5px, -2px) rotate(0.4deg); }
+  66% { transform: translate(-3px, 4px) rotate(-0.5deg); }
+}
+
+.botanical-drift-1 {
+  animation: botanical-drift-1 24s ease-in-out infinite;
+}
+
+.botanical-drift-2 {
+  animation: botanical-drift-2 28s ease-in-out infinite;
+}
+
+.botanical-drift-3 {
+  animation: botanical-drift-3 32s ease-in-out infinite;
+}
+
+/* Legacy aliases — keep for App.jsx parallax scroll handler compatibility */
+.leaf-anim-1 {
+  animation: botanical-drift-1 24s ease-in-out infinite;
+}
+
+.leaf-anim-2 {
+  animation: botanical-drift-2 28s ease-in-out infinite;
+}
+
+/* Accessibility / Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
