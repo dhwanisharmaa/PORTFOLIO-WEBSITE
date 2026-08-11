@@ -13,7 +13,8 @@ const Projects = () => {
         { label: 'GitHub →', url: 'https://github.com/kushagrjoshi777/CitySafe-2026' }
       ],
       accent: 'var(--pond)',
-      clipClass: 'url(#wobbly-clip-1)'
+      clipClass: 'url(#wobbly-clip-1)',
+      image: '/citysafe-watercolor.jpg'
     },
     {
       id: 'festify',
@@ -24,7 +25,8 @@ const Projects = () => {
       role: 'Full-Stack Developer',
       links: [],
       accent: 'var(--moss)',
-      clipClass: 'url(#wobbly-clip-2)'
+      clipClass: 'url(#wobbly-clip-2)',
+      image: '/festify-watercolor.png'
     },
     {
       id: 'niyantra',
@@ -37,7 +39,8 @@ const Projects = () => {
         { label: 'View Project →', url: 'https://niyantra-ai.vercel.app/' }
       ],
       accent: 'var(--olive)',
-      clipClass: 'url(#wobbly-clip-1)'
+      clipClass: 'url(#wobbly-clip-1)',
+      image: '/niyantra-watercolor.jpg'
     },
     {
       id: 'musclemap',
@@ -48,7 +51,8 @@ const Projects = () => {
       role: 'Co-Developer',
       links: [],
       accent: 'var(--lotus)',
-      clipClass: 'url(#wobbly-clip-2)'
+      clipClass: 'url(#wobbly-clip-2)',
+      image: '/muscle-map-watercolor.png'
     },
     {
       id: 'step',
@@ -204,16 +208,33 @@ const Projects = () => {
                           justifyContent: 'center'
                         }}
                       >
-                        <span style={{
-                          fontFamily: 'var(--font-display)',
-                          fontSize: '1.6rem',
-                          color: 'var(--forest)',
-                          opacity: 0.15,
-                          fontWeight: '500',
-                          letterSpacing: '0.05em'
-                        }}>
-                          {project.title}
-                        </span>
+                        {project.image ? (
+                          <img
+                            src={project.image}
+                            alt={`${project.title} watercolor illustration`}
+                            loading="lazy"
+                            style={{
+                              width: '100%',
+                              height: '100%',
+                              objectFit: 'contain',
+                              objectPosition: 'center',
+                              opacity: 0.82,
+                              mixBlendMode: 'multiply',
+                              pointerEvents: 'none'
+                            }}
+                          />
+                        ) : (
+                          <span style={{
+                            fontFamily: 'var(--font-display)',
+                            fontSize: '1.6rem',
+                            color: 'var(--forest)',
+                            opacity: 0.15,
+                            fontWeight: '500',
+                            letterSpacing: '0.05em'
+                          }}>
+                            {project.title}
+                          </span>
+                        )}
                       </div>
                     </div>
                   )}
@@ -237,16 +258,33 @@ const Projects = () => {
                           justifyContent: 'center'
                         }}
                       >
-                        <span style={{
-                          fontFamily: 'var(--font-display)',
-                          fontSize: '1.6rem',
-                          color: 'var(--forest)',
-                          opacity: 0.15,
-                          fontWeight: '500',
-                          letterSpacing: '0.05em'
-                        }}>
-                          {project.title}
-                        </span>
+                        {project.image ? (
+                          <img
+                            src={project.image}
+                            alt={`${project.title} watercolor illustration`}
+                            loading="lazy"
+                            style={{
+                              width: '100%',
+                              height: '100%',
+                              objectFit: 'contain',
+                              objectPosition: 'center',
+                              opacity: 0.82,
+                              mixBlendMode: 'multiply',
+                              pointerEvents: 'none'
+                            }}
+                          />
+                        ) : (
+                          <span style={{
+                            fontFamily: 'var(--font-display)',
+                            fontSize: '1.6rem',
+                            color: 'var(--forest)',
+                            opacity: 0.15,
+                            fontWeight: '500',
+                            letterSpacing: '0.05em'
+                          }}>
+                            {project.title}
+                          </span>
+                        )}
                       </div>
                     </div>
                   ) : (
